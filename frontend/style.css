@@ -5,10 +5,12 @@
 }
 
 #root {
+
   height: 100vh;
   width: 100%;
   background-image: url("../media/background.jpeg");
   background-size: cover;
+  font-family: 'Montserrat', sans-serif;
 
 }
 
@@ -29,6 +31,7 @@ h1 {
   margin-left: 100px;
   text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  font-style: italic;
 }
 
 .menu-container {
@@ -55,5 +58,90 @@ h1 {
 
 
 
+/* CREATE LANDING PAGE */
+
+.middle-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  gap: 20px;
+}
+
+.text {
+  width: 500px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.arrow {
+  font-size: 20px;
+}
+
+button {
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.825);
+  border: none;
+  border-radius: 20px;
+  transition: all 1s ease;
+  font-size: 20px;
+  font-weight: 300;
+  font-style: italic;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: all 1s ease;
+  background-color: #21D4FD;
+background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+color: white;
+
+  
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+  height: 400px;
+  background-color: rgba(255, 255, 255, 0.233);
+  gap: 20px;
+  border-radius: 40px;
+}
+
+
+
+
+/* CREATE WISH PAGE */
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.233);
+  border-radius: 40px;
+  gap: 20px;
+}
+
+input {
+  width: 400px ;
+  height: 35px;
+}
+
+select {
+  width: 400px ;
+  height: 35px;
+}
 
 
