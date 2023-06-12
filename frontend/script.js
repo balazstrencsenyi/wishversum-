@@ -1,11 +1,14 @@
-import { createHeader } from "./model/createdom"
+import { createHeader } from './model/createDom.js';
+
 const root = document.getElementById("root")
 
 function main () {
   
-  createHeader()
   root.append(createHeader())
 }
 
-window.onload = main
+window.onload = () => {
+  main(); 
+ }
+ 
 

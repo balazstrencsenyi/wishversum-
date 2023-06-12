@@ -10,3 +10,13 @@ const FE_FS_PATH = path.join(__dirname, "..", "frontend");
 app.use(express.static(FE_FS_PATH));
 app.use(express.json());
 
+
+
+
+
+
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`);
+});
+
+
