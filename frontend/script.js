@@ -1,14 +1,16 @@
-import { createHeader, createLandingPage, createWishForm } from './model/createDom.js';
+import { createHeader, createLandingPage, saveData } from "./controllers/saveData.js";
 
-const root = document.getElementById("root")
+function init() {
+  const root = document.querySelector("#root");
 
-function main () {
-  
-  root.append(createHeader(), createLandingPage(), createWishForm())
+  // Create header
+  const header = createHeader();
+  root.appendChild(header);
+
+  // Create landing page
+  const landingPage = createLandingPage();
+  root.appendChild(landingPage);
 }
 
-window.onload = () => {
-  main(); 
- }
- 
-
+// Initialize the application
+window.onload = init;

@@ -19,11 +19,6 @@ export async function get(url) {
   return data;
 }
 
-export async function getImage(url) {
-  const response = await fetch(url);
-  const imageBlob = await response.blob();
-  return URL.createObjectURL(imageBlob);
-}
 
 export async function post(url, formData) {
   const response = await fetch(url, {

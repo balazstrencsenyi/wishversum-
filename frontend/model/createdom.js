@@ -72,6 +72,7 @@ firstInput.setAttribute("placeholder", "First Name")
 
 const lastInput = createEl("input")
 lastInput.classList.add("input")
+lastInput.id = "last-name"
 lastInput.setAttribute("type", "text")
 lastInput.setAttribute("placeholder", "Last Name")
 
