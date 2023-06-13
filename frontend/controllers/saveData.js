@@ -201,6 +201,50 @@ export function createLandingPage() {
   thirdPage.append(wishForm);
   middleContainer.append(thirdPage);
 
+  //create fourth page for landing page with FAQ
+
+  const fourthPage = createEl("div");
+  fourthPage.classList.add("fourth-page");
+
+  const faqContainer = createEl("div");
+  faqContainer.classList.add("faq-container");
+
+  const faqText = createEl("div");
+  faqText.classList.add("faq-text");
+  faqText.innerText = "Frequently Asked Questions";
+
+  const faqQuestion1 = createEl("div");
+  faqQuestion1.classList.add("faq-question");
+  faqQuestion1.innerText = "How do I make a wish?";
+  const faqAnswer1 = createEl("div");
+  faqAnswer1.classList.add("faq-answer");
+  faqAnswer1.innerText = "Click on the button 'Make a wish' and fill out the form. We will contact you as soon as possible.";
+
+  const faqQuestion2 = createEl("div");
+  faqQuestion2.classList.add("faq-question");
+  faqQuestion2.innerText = "How much does it cost to make a wish?";
+  const faqAnswer2 = createEl("div");
+  faqAnswer2.classList.add("faq-answer");
+  faqAnswer2.innerText = "It is free to make a wish. However, if you want to support our work, you can donate any amount of money.";
+
+  const faqQuestion3 = createEl("div");
+  faqQuestion3.classList.add("faq-question");
+  faqQuestion3.innerText = "How long does it take to fulfill a wish?";
+  const faqAnswer3 = createEl("div");
+  faqAnswer3.classList.add("faq-answer");
+  faqAnswer3.innerText = "It depends on the wish. We will contact you as soon as possible.";
+
+  const faqQuestion4 = createEl("div");
+  faqQuestion4.classList.add("faq-question");
+  faqQuestion4.innerText = "How can I support your work?";
+  const faqAnswer4 = createEl("div");
+  faqAnswer4.classList.add("faq-answer");
+  faqAnswer4.innerText = "You can support our work by donating any amount of money.";
+
+  faqContainer.append(faqText, faqQuestion1, faqAnswer1, faqQuestion2, faqAnswer2, faqQuestion3, faqAnswer3, faqQuestion4, faqAnswer4);
+  fourthPage.append(faqContainer);
+  middleContainer.append(fourthPage);
+
 
   return middleContainer;
 
