@@ -43,6 +43,7 @@ h1 {
   -webkit-background-clip: text; /* For Safari */
   -webkit-text-fill-color: transparent; /* For Safari */
   background-clip: text;
+  letter-spacing: .05em;
 }
 
 h1:hover {
@@ -89,7 +90,7 @@ h1:hover {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 492vh;
+  height: 510vh;
   color: white;
 }
 
