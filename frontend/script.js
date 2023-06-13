@@ -1,16 +1,18 @@
-import { createHeader, createLandingPage, saveData } from "./controllers/saveData.js";
+import { createHeader, createLandingPage, saveData} from "./controllers/saveData.js";
+import { whenScrolled } from "./controllers/scroll.js";
 
-function init() {
+function main() {
   const root = document.querySelector("#root");
 
-  // Create header
   const header = createHeader();
   root.appendChild(header);
 
-  // Create landing page
   const landingPage = createLandingPage();
   root.appendChild(landingPage);
 }
 
-// Initialize the application
-window.onload = init;
+window.onload = () => {
+  main();
+  saveData();
+  whenScrolled();
+};
