@@ -118,10 +118,12 @@ export function createLandingPage() {
   button.innerText = "Make a wish";
 
   button.addEventListener("click", () => {
-    middleContainer.innerHTML = "";
-    middleContainer.append(createWishForm());
-    saveData(); 
+    document.getElementById("third-page").scrollIntoView({
+      behavior: "smooth"
+    });
   });
+
+
   
   firstPage.append(card);
   card.append(text, text2, arrow, button);
