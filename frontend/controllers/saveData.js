@@ -245,6 +245,88 @@ export function createLandingPage() {
   fourthPage.append(faqContainer);
   middleContainer.append(fourthPage);
 
+  //create fifth page for landing page with contact us
+
+  const fifthPage = createEl("div");
+  fifthPage.classList.add("fifth-page");
+
+  const contactContainer = createEl("div");
+  contactContainer.classList.add("contact-container");
+
+  const contactCard = createEl("div");
+  contactCard.classList.add("contact-card");
+
+  const contactText = createEl("div");
+  contactText.classList.add("contact-text");
+  contactText.innerText = "Contact us";
+
+  const textContainer2 = createEl("div");
+  textContainer2.classList.add("text-container2");
+
+  const contactQuestion1 = createEl("div");
+  contactQuestion1.classList.add("contact-question");
+  contactQuestion1.innerText = "How can I contact you?";
+  
+  const contactAnswer1 = createEl("div");
+  contactAnswer1.classList.add("contact-answer");
+  contactAnswer1.innerText = "You can contact us by sending an email to wishversum@gmail.com.";
+  
+  const contactAnswer2 = createEl("div");
+  contactAnswer2.classList.add("contact-answer");
+  contactAnswer2.innerText = "You can also contact us by calling +49 123 456 789.";
+  
+  const contactQuestion2 = createEl("div");
+  contactQuestion2.classList.add("contact-question");
+  contactQuestion2.innerText = "Where are you located?";
+  
+  const contactAnswer3 = createEl("div");
+  contactAnswer3.classList.add("contact-answer");
+  contactAnswer3.innerText = "We are located in Budapest, Hungary.";
+  
+  const contactQuestion3 = createEl("div");
+  contactQuestion3.classList.add("contact-question");
+  contactQuestion3.innerText = "What are your opening hours?";
+  
+  const contactAnswer4 = createEl("div");
+  contactAnswer4.classList.add("contact-answer");
+  contactAnswer4.innerText = "We are open 24/7.";
+
+  textContainer2.append(contactQuestion1, contactAnswer1, contactAnswer2, contactQuestion2, contactAnswer3, contactQuestion3, contactAnswer4);
+
+  const logoContainer = createEl("div");
+  logoContainer.classList.add("logo-container");
+
+  const logo = createEl("img");
+  logo.classList.add("logo");
+  logo.setAttribute("src", "media/iglogo.png");
+
+  const logo2 = createEl("img");
+  logo2.classList.add("logo");
+  logo2.setAttribute("src", "media/fblogo.png");
+
+  logoContainer.append(logo, logo2);
+
+  contactCard.append( 
+    contactText,
+    textContainer2, logoContainer);
+  
+  contactContainer.append(
+    contactCard
+  );
+  
+
+  const imageContainer2 = createEl("div");
+  imageContainer2.classList.add("image-container2");
+
+  const image2 = createEl("img");
+  image2.classList.add("contact-image");
+  image2.setAttribute("src", "media/contact.png");
+
+  imageContainer2.append(image2);
+  fifthPage.append(contactContainer, imageContainer2);
+  middleContainer.append(fifthPage);
+
+
 
   return middleContainer;
 
