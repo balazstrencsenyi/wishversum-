@@ -2,7 +2,7 @@ import { createHeader, createLandingPage, saveData } from './controllers/saveDat
 import { whenScrolled } from './controllers/scroll.js';
 import { buildCards } from './controllers/buildCards.js';
 
-async function main() {
+export async function main() {
   const root = document.querySelector('#root');
 
   const header = createHeader();
@@ -13,8 +13,8 @@ async function main() {
 
 }
 
-window.onload = () => {
-  main();
+window.onload = async () => {
+  await main();
   saveData();
   whenScrolled();
 };

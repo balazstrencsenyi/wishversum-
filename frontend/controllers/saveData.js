@@ -161,9 +161,6 @@ export function createLandingPage() {
   thirdPage.classList.add("third-page");
   thirdPage.id = "third-page";
 
-  const wishesContainer = createEl("div");
-  wishesContainer.classList.add("wishes-container");
-
   const wishFormContainer = createEl("div");
   wishFormContainer.classList.add("wish-form-container");
 
@@ -280,16 +277,21 @@ export function createLandingPage() {
   const submitButton = createEl("button");
   submitButton.classList.add("submit-button");
   submitButton.setAttribute("type", "submit");
-  submitButton.innerText = "Wish";
+  submitButton.innerText = "Let's Explore!";
+
+  submitButton.addEventListener("click", () => {
+    //if clicked render webshop
+    root.innerHTML = "";
+    buildCards();
+  });
   
 
   selectInput.append(option1, option2, option3, option4, option5, option6, option7, option8, option9, option10, option11, option12);
   wishForm.append(labelContainer, label1Container, label2Container, label3Container,  label4Container, submitButton);
   wishFormContainer.append(wishForm);
-  thirdPage.append(wishesContainer,wishFormContainer);
+  thirdPage.append(wishFormContainer);
   middleContainer.append(thirdPage);
 
-  buildCards();
 
   //create fourth page for landing page with FAQ
 

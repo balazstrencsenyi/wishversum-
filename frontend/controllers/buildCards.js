@@ -1,6 +1,37 @@
-export async function buildCards() {
+import { createHeader, createLandingPage, saveData } from './saveData.js';
+import {main} from '../script.js';
+
+
+export  async function buildCards() {
+
+  const root = document.querySelector('#root');
+
+  const webShop = document.createElement('div');
+  webShop.className = 'webshop-container';
+
+  const webShopHeader = document.createElement('div');
+  webShopHeader.className = 'webshop-header';
+
+  const webShopTitle = document.createElement('h1');
+  webShopTitle.className = 'webshop-title';
+  webShopTitle.innerText = 'Webshop';
+
+  const webShopButton = document.createElement('button');
+  webShopButton.className = 'webshop-button';
+  webShopButton.innerText = 'Go back';
+
+  webShopButton.addEventListener('click', () => {
+    root.innerHTML = '';
+    main();
+  });
+
+  webShopHeader.append(webShopTitle, webShopButton);
+
   const wishesContainer = document.createElement('div');
   wishesContainer.className = 'wishes-container1';
+
+  const webShopRightContainer = document.createElement('div');
+  webShopRightContainer.className = 'webshop-right-container';
 
   const response = await fetch('/wishes');
   const data = await response.json();
@@ -37,16 +68,17 @@ export async function buildCards() {
     card.appendChild(cardText);
     card.appendChild(cardUnder);
 
-    wishesContainer.appendChild(card);
-
     cardTitle.innerText = data[i].title;
     /*cardIMG.src = `/wishes/pictures/${data[i].id}.jpg`;*/
     cardText.innerText = data[i].text;
-
-    const wishesContainer1 = document.querySelector('.wishes-container');
-    wishesContainer1.appendChild(wishesContainer);
+      
+    wishesContainer.appendChild(card);
+   
   }
 
-  return wishesContainer;
+ 
+  webShop.append(wishesContainer, webShopRightContainer, webShopHeader);
+  root.appendChild(webShop);
+  return webShop;
 
 }
