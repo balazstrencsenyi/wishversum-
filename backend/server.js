@@ -7,6 +7,7 @@ const upload = require("express-fileupload");
 
 const FE_FS_PATH = path.join(__dirname, "..", "frontend");
 const ordersFilePath = path.join(__dirname, "data");
+const wishesFilePath = "./wishes.json";
 
 app.use(express.static(FE_FS_PATH));
 app.use(express.json());
@@ -63,11 +64,19 @@ app.get("/orders", (req, res) => {
   });
 });
 
+app.get('/wishes', (req, res) => {
+  fs.readFile(wishesFilePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error(err);
+      return res.status(500).send('Error retrieving wishes');
+    }
 
-
-
-app.listen(port, () => {
-  console.log(`Example app listening at http://localhost:${port}`);
+    const wishes = JSON.parse(data);
+    res.json(wishes);
+  });
 });
 
+app.listen(port, () => {
+  console.log(`Server is running on http://localhost:${port}`);
+});
 
