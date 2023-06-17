@@ -227,46 +227,59 @@ export function createLandingPage() {
 
   const option1 = createEl("option");
   option1.setAttribute("value", "Capricorn");
-  option1.innerText = "Money";
+  option1.innerText = "Capricorn";
 
   const option2 = createEl("option");
   option2.setAttribute("value", "love");
-  option2.innerText = "Love";
+  option2.innerText = "Aquarius";
 
   const option3 = createEl("option");
   option3.setAttribute("value", "health");
-  option3.innerText = "Health";
+  option3.innerText = "Taurus";
 
   const option4 = createEl("option");
   option4.setAttribute("value", "Wealth");
-  option4.innerText = "Wealth";
+  option4.innerText = "Leo";
 
   const option5 = createEl("option");
   option5.setAttribute("value", "Family");
-  option5.innerText = "Family";
+  option5.innerText = "Scorpio";
 
   const option6 = createEl("option");
   option6.setAttribute("value", "Career");
-  option6.innerText = "Career";
+  option6.innerText = "Gemini";
 
   const option7 = createEl("option");
   option7.setAttribute("value", "Better grades");
-  option7.innerText = "Better grades";
+  option7.innerText = "Sagiattarius";
 
   const option8 = createEl("option");
   option8.setAttribute("value", "Happiness");
-  option8.innerText = "Happiness";
+  option8.innerText = "Aries";
 
   const option9 = createEl("option");
   option9.setAttribute("value", "Peace");
-  option9.innerText = "Peace";
+  option9.innerText = "Libra";
+
+  const option10 = createEl("option");
+  option10.setAttribute("value", "Fun");
+  option10.innerText = "Pisces";
+
+  const option11 = createEl("option");
+  option11.setAttribute("value", "Other");
+  option11.innerText = "Cancer";
+
+  const option12 = createEl("option");
+  option12.setAttribute("value", "Other");
+  option12.innerText = "Virgo";
+
 
   const submitButton = createEl("button");
   submitButton.classList.add("submit-button");
   submitButton.setAttribute("type", "submit");
   submitButton.innerText = "Wish";
 
-  selectInput.append(option1, option2, option3, option4, option5, option6, option7, option8, option9);
+  selectInput.append(option1, option2, option3, option4, option5, option6, option7, option8, option9, option10, option11, option12);
   wishForm.append(labelContainer, label1Container, label2Container, label3Container,  label4Container, submitButton);
   wishFormContainer.append(wishForm);
   thirdPage.append(buildCards(),wishFormContainer);
