@@ -22,29 +22,7 @@
     "title": "Peace",
     "text": "Espresso con panna, which means 'espresso with cream' in Italian, is a single or double shot of espresso",
     "price": "1 $"
-  },
-  {
-    "id": 5,
-    "title": "Better grades",
-    "text": "A flat white is a coffee drink consisting of espresso with microfoam (steamed milk with small, fine bubbles and a glossy or velvety consistency).",
-    "price": "3 $"
-  },
-  {
-    "id": 6,
-    "title": "Health",
-    "text": "Frappé coffee, an iced coffee beverage made from instant coffee originally from Greece",
-    "price": "2 $"
-  },
-  {
-    "id": 7,
-    "title": "Love",
-    "text": "Caffee Americano, a style of coffee prepared by adding hot water to espresso",
-    "price": "1 $"
-  },
-  {
-    "id": 8,
-    "title": "Balance",
-    "text": "Caffee Americano, a style of coffee prepared by adding hot water to espresso",
-    "price": "1 $"
   }
+
+
 ]

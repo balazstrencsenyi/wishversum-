@@ -263,14 +263,26 @@ form {
   height: 100%;
 }
 
+.wishes-container1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.wish-card {
+  height: 20%;
+  width: 80%;
+}
+
 .wishes-container > input {
   height: 30px;
   width: 60px;
 }
 
-.wish-card {
 
-}
 
 
 select {
