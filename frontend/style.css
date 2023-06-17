@@ -170,31 +170,6 @@ color: white;
 
 
 
-/* CREATE WISH PAGE */
-
-form {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 400px;
-  width: 600px;
-  background-color: rgba(255, 255, 255, 0.233);
-  border-radius: 40px;
-  gap: 20px;
-}
-
-input {
-  width: 400px ;
-  height: 35px;
-}
-
-select {
-  width: 400px ;
-  height: 35px;
-}
-
-
 /* CREATE ABOUT US PAGE */
 
 .second-page {
@@ -257,9 +232,81 @@ select {
   width: 100%;
 
   display: flex;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 400px;
+  width: 600px;
+  background-color: rgba(255, 255, 255, 0.233);
+  border-radius: 40px;
+  gap: 20px;
 }
+
+.wish-form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.wishes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+}
+
+.wishes-container > input {
+  height: 30px;
+  width: 60px;
+}
+
+.wish-card {
+
+}
+
+
+select {
+  width: 400px ;
+  height: 35px;
+  margin-right: 25px;
+}
+
+
+
+.label-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.label-container > input {
+  width: 400px ;
+  height: 35px;
+  margin-right: 25px;
+
+}
+
+.label-container > label {
+  margin-left: 15px;
+  font-size: 17px;
+  font-weight: 500;
+  background: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+  -webkit-background-clip: text; /* For Safari */
+  -webkit-text-fill-color: transparent; /* For Safari */
+  background-clip: text;
+  text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+
+}
+
 
 /* CREATE FAQ PAGE */
 

@@ -1,5 +1,6 @@
 import { createEl } from '../utils/utils.js';
 import { post } from "../utils/utils.js";
+import { buildCards} from "./buildCards.js";1
 
 export function saveData() {
   const root = document.querySelector("#root");
@@ -160,39 +161,72 @@ export function createLandingPage() {
   thirdPage.classList.add("third-page");
   thirdPage.id = "third-page";
 
+  const wishFormContainer = createEl("div");
+  wishFormContainer.classList.add("wish-form-container");
+
   const wishForm = createEl("form");
   wishForm.classList.add("wish-form");
 
+  const labelContainer = createEl("div");
+  labelContainer.classList.add("label-container");
+  const label = createEl("label");
+  label.classList.add("label");
+  label.innerText = "First Name:";
   const firstInput = createEl("input");
   firstInput.classList.add("input");
   firstInput.setAttribute("type", "text");
-  firstInput.setAttribute("placeholder", "First Name");
+  firstInput.setAttribute("placeholder", "Tim");
   firstInput.setAttribute("name", "firstInput"); // Add name attribute
+  labelContainer.append(label, firstInput);
 
+  const label1Container = createEl("div");
+  label1Container.classList.add("label-container");
+  const label1 = createEl("label");
+  label1.classList.add("label");
+  label1.innerText = "Last Name:";
   const lastInput = createEl("input");
   lastInput.classList.add("input");
   lastInput.id = "last-name";
   lastInput.setAttribute("type", "text");
-  lastInput.setAttribute("placeholder", "Last Name");
+  lastInput.setAttribute("placeholder", "Bennett");
   lastInput.setAttribute("name", "lastInput"); // Add name attribute
+  label1Container.append(label1, lastInput);
 
+  const label2Container = createEl("div");
+  label2Container.classList.add("label-container");
+  const label2 = createEl("label");
+  label2.classList.add("label");
+  label2.innerText = "Email:";
   const emailInput = createEl("input");
   emailInput.classList.add("input");
   emailInput.setAttribute("type", "email");
-  emailInput.setAttribute("placeholder", "Email");
+  emailInput.setAttribute("placeholder", "timbennett@gmail.com");
   emailInput.setAttribute("name", "emailInput"); // Add name attribute
+  label2Container.append(label2, emailInput);
 
+  const label3Container = createEl("div");
+  label3Container.classList.add("label-container");
+  const label3 = createEl("label");
+  label3.classList.add("label");
+  label3.innerText = "Date of Birth:";
   const wishInput = createEl("input");
   wishInput.classList.add("input");
   wishInput.setAttribute("type", "text");
-  wishInput.setAttribute("placeholder", "Your wish");
+  wishInput.setAttribute("placeholder", "YYYY-MM-DD");
   wishInput.setAttribute("name", "wishInput"); // Add name attribute
+  label3Container.append(label3, wishInput);
 
+  const label4Container = createEl("div");
+  label4Container.classList.add("label-container");
+  const label4 = createEl("label");
+  label4.classList.add("label");
+  label4.innerText = "Astrological-Sign:";
   const selectInput = createEl("select");
   selectInput.setAttribute("name", "selectInput"); // Add name attribute
+  label4Container.append(label4, selectInput);
 
   const option1 = createEl("option");
-  option1.setAttribute("value", "money");
+  option1.setAttribute("value", "Capricorn");
   option1.innerText = "Money";
 
   const option2 = createEl("option");
@@ -233,8 +267,9 @@ export function createLandingPage() {
   submitButton.innerText = "Wish";
 
   selectInput.append(option1, option2, option3, option4, option5, option6, option7, option8, option9);
-  wishForm.append(firstInput, lastInput, emailInput, wishInput, selectInput, submitButton);
-  thirdPage.append(wishForm);
+  wishForm.append(labelContainer, label1Container, label2Container, label3Container,  label4Container, submitButton);
+  wishFormContainer.append(wishForm);
+  thirdPage.append(buildCards(),wishFormContainer);
   middleContainer.append(thirdPage);
 
   //create fourth page for landing page with FAQ
