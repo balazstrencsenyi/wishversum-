@@ -56,6 +56,9 @@ export  async function buildCards() {
     const cardUnder = document.createElement('div');
     cardUnder.className = 'card-under';
 
+    const cardPrice = document.createElement('p');
+    cardPrice.className = 'card-price';
+
     const cardInput = document.createElement('input');
     cardInput.className = 'card-input';
     cardInput.type = 'number';
@@ -64,8 +67,10 @@ export  async function buildCards() {
     cardButton.className = 'card-button';
     cardButton.innerText = 'Add to cart';
 
+    cardUnder.appendChild(cardPrice);
     cardUnder.appendChild(cardInput);
     cardUnder.appendChild(cardButton);
+    
 
     card.appendChild(cardTitle);
     card.appendChild(cardIMG);
@@ -75,6 +80,7 @@ export  async function buildCards() {
     cardTitle.innerText = data[i].title;
     /*cardIMG.src = `/wishes/pictures/${data[i].id}.jpg`;*/
     cardText.innerText = data[i].text;
+    cardPrice.innerText = data[i].price;
       
     wishesContainer.appendChild(card);
    
