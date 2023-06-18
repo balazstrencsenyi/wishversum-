@@ -505,6 +505,7 @@ select {
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.61);
   background-color: rgba(255, 255, 255, 0.215);
+  border-radius: 10px;
 }
 
 
@@ -550,9 +551,16 @@ select {
 }
 
 .cart {
-  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: auto;
   width: 300px;
+  padding: 50px;
   background-color: rgba(255, 255, 255, 0.268);
+  gap: 20px;
+  border-radius:  10px;
 }
 
 
@@ -560,4 +568,13 @@ select {
   display: flex;
   gap: 30px;
   margin-top: 15px;
+}
+
+.cart-item {
+  height: auto;
+  width: 120%;
+  background-color: rgba(255, 255, 255, 0.184) ;
+  border-radius: 10px;
+  padding: 10px;
+
 }
