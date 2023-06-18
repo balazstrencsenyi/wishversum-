@@ -295,6 +295,13 @@ export function createLandingPage() {
     //go to store
     root.innerHTML = '';
     buildCards();
+    
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+    
   });
 
   buttonContainer.append(submitButton,exploreButton)

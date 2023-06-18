@@ -12,6 +12,7 @@ export  async function buildCards() {
 
   const webShop = document.createElement('div');
   webShop.className = 'webshop-container';
+  webShop.id = "webshop-container";
 
   const webShopHeader = document.createElement('div');
   webShopHeader.className = 'webshop-header';
