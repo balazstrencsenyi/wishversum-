@@ -18,7 +18,7 @@ export  async function buildCards() {
 
   const webShopTitle = document.createElement('h1');
   webShopTitle.className = 'webshop-title';
-  webShopTitle.innerText = 'Webshop';
+  webShopTitle.innerText = 'Store';
 
   const webShopButton = document.createElement('button');
   webShopButton.className = 'webshop-button';
