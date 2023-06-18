@@ -267,21 +267,6 @@ form {
 }
 
 
-
-.wish-card {
-  height: 40%;
-  width: 30%;
-  color: white;
-}
-
-.wishes-container > input {
-  height: 30px;
-  width: 60px;
-}
-
-
-
-
 select {
   width: 400px ;
   height: 35px;
@@ -467,7 +452,7 @@ select {
 
 .webshop-container {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #21D4FD;
   background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
   display: flex;
@@ -480,10 +465,11 @@ select {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
-  height: 100%;
+  align-items: start;
+  height: 65%;
   width: 60%;
-  gap: 20px;
+  gap: 35px;
+  margin-bottom: 650px;
 }
 
 .webshop-right-container {
@@ -507,4 +493,38 @@ select {
   position: absolute;
   right: 0;
 
+}
+
+.wish-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 15%;
+  padding: 10px;
+  width: 40%;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.61);
+  background-color: rgba(255, 255, 255, 0.215);
+}
+
+
+
+
+
+.card-under {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.card-input {
+  height: 30px;
+  width: 150px;
+}
+
+.card-button {
+  height: 40px;
+  width: 130px;
 }

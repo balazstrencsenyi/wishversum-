@@ -8,43 +8,55 @@
   {
     "id": 2,
     "title": "Family",
-    "text": "Café au lait is coffee with hot milk added. It differs from white coffee, which is coffee with cold milk or other whiteners added.",
+    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
     "price": "3 $"
   },
   {
     "id": 3,
     "title": "Wealth",
-    "text": "Iced coffee is a coffee beverage served cold. It may be prepared either by brewing coffee normally and then serving it over ice.",
+    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
     "price": "2 $"
   },
   {
     "id": 4,
     "title": "Peace",
-    "text": "Espresso con panna, which means 'espresso with cream' in Italian, is a single or double shot of espresso",
+    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
     "price": "1 $"
   },
   {
     "id": 5,
     "title": "Better grades",
-    "text": "A flat white is a coffee drink consisting of espresso with microfoam (steamed milk with small, fine bubbles and a glossy or velvety consistency).",
+    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
     "price": "3 $"
   },
   {
     "id": 6,
     "title": "Health",
-    "text": "Frappé coffee, an iced coffee beverage made from instant coffee originally from Greece",
+    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
     "price": "2 $"
   },
   {
     "id": 7,
     "title": "Love",
-    "text": "Caffee Americano, a style of coffee prepared by adding hot water to espresso",
+    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
     "price": "1 $"
   },
   {
     "id": 8,
     "title": "Balance",
-    "text": "Caffee Americano, a style of coffee prepared by adding hot water to espresso",
+    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
+    "price": "1 $"
+  },
+  {
+    "id": 9,
+    "title": "Live long",
+    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
+    "price": "1 $"
+  },
+  {
+    "id": 10,
+    "title": "Connections",
+    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
     "price": "1 $"
   }
 ]
