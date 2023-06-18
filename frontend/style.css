@@ -528,3 +528,29 @@ select {
   height: 40px;
   width: 130px;
 }
+
+.cart-img {
+  display: flex;
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  gap: 30px;
+
+}
+
+.cart {
+  height: 500px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.268);
+}

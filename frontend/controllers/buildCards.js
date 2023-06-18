@@ -22,7 +22,7 @@ export  async function buildCards() {
 
   const webShopButton = document.createElement('button');
   webShopButton.className = 'webshop-button';
-  webShopButton.innerText = 'Go back';
+  webShopButton.innerText = 'Go Back';
 
   webShopButton.addEventListener('click', () => {
     root.innerHTML = '';
@@ -36,6 +36,24 @@ export  async function buildCards() {
 
   const webShopRightContainer = document.createElement('div');
   webShopRightContainer.className = 'webshop-right-container';
+
+  const cartIMG = document.createElement('img');
+  cartIMG.classList.add('cart-img')
+  cartIMG.src = './media/cart.png';
+
+  const cartContainer = document.createElement('div');
+  cartContainer.classList.add('cart-container');
+
+  const cart = document.createElement('div');
+  cart.classList.add('cart')
+
+  const cartButton = document.createElement('button');
+  cartButton.classList.add('cart-button');
+  cartButton.innerText = 'Send Order'
+
+  cartContainer.append(cart, cartButton)
+
+  webShopRightContainer.append(cartIMG, cartContainer);
 
   const response = await fetch('/wishes');
   const data = await response.json();
