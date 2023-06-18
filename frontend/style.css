@@ -466,10 +466,10 @@ select {
   flex-wrap: wrap;
   justify-content: center;
   align-items: start;
-  height: 65%;
+  height: 85%;
   width: 60%;
   gap: 35px;
-  margin-bottom: 650px;
+  margin-bottom: 400px;
 }
 
 .webshop-right-container {
@@ -499,7 +499,7 @@ select {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  height: 15%;
+  height: 7%;
   padding: 10px;
   width: 40%;
   color: white;

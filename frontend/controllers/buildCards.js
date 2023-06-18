@@ -7,7 +7,7 @@ export  async function buildCards() {
   const root = document.querySelector('#root');
 
   root.style.width = '100vw';
-  root.style.height = '300vh';
+  root.style.height = '500vh';
   root.style.overflow = 'hidden';
 
   const webShop = document.createElement('div');

@@ -2,61 +2,151 @@
   {
     "id": 1,
     "title": "Happiness",
-    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
+    "text": "Happiness is a state of well-being and contentment that brings joy and fulfillment to one's life.",
     "price": "2 $"
   },
   {
     "id": 2,
     "title": "Family",
-    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
+    "text": "Family is a source of love, support, and connection, providing a sense of belonging and togetherness.",
     "price": "3 $"
   },
   {
     "id": 3,
     "title": "Wealth",
-    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
+    "text": "Wealth signifies abundance and financial prosperity, providing opportunities and resources for a comfortable life.",
     "price": "2 $"
   },
   {
     "id": 4,
     "title": "Peace",
-    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
+    "text": "Peace brings tranquility and harmony, creating a calm and serene environment for personal well-being.",
     "price": "1 $"
   },
   {
     "id": 5,
     "title": "Better grades",
-    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
+    "text": "Better grades represent academic achievement and growth, reflecting dedication and learning success.",
     "price": "3 $"
   },
   {
     "id": 6,
     "title": "Health",
-    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
+    "text": "Health is the foundation of well-being, encompassing physical, mental, and emotional vitality.",
     "price": "2 $"
   },
   {
     "id": 7,
     "title": "Love",
-    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
+    "text": "Love is a powerful emotion that nurtures relationships and brings warmth and compassion to life.",
     "price": "1 $"
   },
   {
     "id": 8,
     "title": "Balance",
-    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
+    "text": "Balance fosters harmony and equilibrium, allowing for a sense of stability and inner peace.",
     "price": "1 $"
   },
   {
     "id": 9,
     "title": "Live long",
-    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
+    "text": "Living long signifies longevity and well-being, enabling the enjoyment of a fulfilling and meaningful life.",
     "price": "1 $"
   },
   {
     "id": 10,
     "title": "Connections",
-    "text": "A breve, also known as a breve latte or a caffe breve, is an espresso based coffee drink.",
+    "text": "Connections form valuable relationships and networks, offering support, growth, and shared experiences.",
     "price": "1 $"
+  },
+  {
+    "id": 11,
+    "title": "Success",
+    "text": "Success represents achievement and accomplishment, reflecting personal growth and reaching goals.",
+    "price": ""
+  },
+  {
+    "id": 12,
+    "title": "Adventure",
+    "text": "Adventure brings excitement and exploration, offering opportunities for new experiences and personal growth.",
+    "price": ""
+  },
+  {
+    "id": 13,
+    "title": "Wisdom",
+    "text": "Wisdom is the culmination of knowledge and experience, guiding decisions and fostering personal growth.",
+    "price": ""
+  },
+  {
+    "id": 14,
+    "title": "Inner peace",
+    "text": "Inner peace is a state of tranquility and calmness, allowing for emotional well-being and self-discovery.",
+    "price": ""
+  },
+  {
+    "id": 15,
+    "title": "Career growth",
+    "text": "Career growth involves professional development and advancement, leading to increased opportunities and fulfillment.",
+    "price": ""
+  },
+  {
+    "id": 16,
+    "title": "Gratitude",
+    "text": "Gratitude is an attitude of appreciation and thankfulness, cultivating positivity and a sense of abundance.",
+    "price": ""
+  },
+  {
+    "id": 17,
+    "title": "Fulfillment",
+    "text": "Fulfillment is the satisfaction and contentment that comes from achieving personal goals and living a purposeful life.",
+    "price": ""
+  },
+  {
+    "id": 18,
+    "title": "Confidence",
+    "text": "Confidence is a belief in oneself and one's abilities, empowering individuals to overcome challenges and pursue success.",
+    "price": ""
+  },
+  {
+    "id": 19,
+    "title": "Creativity",
+    "text": "Creativity is the expression of originality and imagination, fostering innovation and personal self-expression.",
+    "price": ""
+  },
+  {
+    "id": 20,
+    "title": "Self-discovery",
+    "text": "Self-discovery involves exploring one's own identity and values, leading to personal growth and fulfillment.",
+    "price": ""
+  },
+  {
+    "id": 21,
+    "title": "Abundance",
+    "text": "Abundance signifies having an ample supply of resources, opportunities, and experiences, bringing richness to life.",
+    "price": ""
+  },
+  {
+    "id": 22,
+    "title": "Harmony",
+    "text": "Harmony is a state of balance and unity, creating a sense of peace and coherence in one's life.",
+    "price": ""
+  },
+  {
+    "id": 23,
+    "title": "Authenticity",
+    "text": "Authenticity is being true to oneself, embracing individuality, and living in alignment with personal values.",
+    "price": ""
+  },
+  {
+    "id": 24,
+    "title": "Personal growth",
+    "text": "Personal growth involves continuous learning and development, expanding knowledge and capabilities.",
+    "price": ""
+  },
+  {
+    "id": 25,
+    "title": "Mindfulness",
+    "text": "Mindfulness is the practice of being fully present and aware, cultivating clarity, focus, and inner peace.",
+    "price": ""
   }
 ]
