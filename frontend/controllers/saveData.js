@@ -230,64 +230,77 @@ export function createLandingPage() {
   option1.innerText = "Capricorn";
 
   const option2 = createEl("option");
-  option2.setAttribute("value", "love");
+  option2.setAttribute("value", "Aquarius");
   option2.innerText = "Aquarius";
 
   const option3 = createEl("option");
-  option3.setAttribute("value", "health");
+  option3.setAttribute("value", "Taurus");
   option3.innerText = "Taurus";
 
   const option4 = createEl("option");
-  option4.setAttribute("value", "Wealth");
+  option4.setAttribute("value", "Leo");
   option4.innerText = "Leo";
 
   const option5 = createEl("option");
-  option5.setAttribute("value", "Family");
+  option5.setAttribute("value", "Scorpio");
   option5.innerText = "Scorpio";
 
   const option6 = createEl("option");
-  option6.setAttribute("value", "Career");
+  option6.setAttribute("value", "Gemini");
   option6.innerText = "Gemini";
 
   const option7 = createEl("option");
-  option7.setAttribute("value", "Better grades");
+  option7.setAttribute("value", "Sagiattarius");
   option7.innerText = "Sagiattarius";
 
   const option8 = createEl("option");
-  option8.setAttribute("value", "Happiness");
+  option8.setAttribute("value", "Aries");
   option8.innerText = "Aries";
 
   const option9 = createEl("option");
-  option9.setAttribute("value", "Peace");
+  option9.setAttribute("value", "Libra");
   option9.innerText = "Libra";
 
   const option10 = createEl("option");
-  option10.setAttribute("value", "Fun");
+  option10.setAttribute("value", "Pisces");
   option10.innerText = "Pisces";
 
   const option11 = createEl("option");
-  option11.setAttribute("value", "Other");
+  option11.setAttribute("value", "Cancer");
   option11.innerText = "Cancer";
 
   const option12 = createEl("option");
-  option12.setAttribute("value", "Other");
+  option12.setAttribute("value", "Virgo");
   option12.innerText = "Virgo";
 
+  const buttonContainer = createEl('div');
+  buttonContainer.classList.add('form-button-container')
 
   const submitButton = createEl("button");
   submitButton.classList.add("submit-button");
   submitButton.setAttribute("type", "submit");
-  submitButton.innerText = "Let's Explore!";
+  submitButton.innerText = "Submit";
+
+  const exploreButton = createEl("button");
+  exploreButton.classList.add("explore-button")
+  exploreButton.setAttribute("type", "submit");
+  exploreButton.innerText = "Let's Explore!";
 
   submitButton.addEventListener("click", () => {
-    //if clicked render webshop
-    root.innerHTML = "";
-    buildCards();
+    //save the form data
+    saveData();
   });
   
+  exploreButton.addEventListener("click", () => {
+    //go to store
+    root.innerHTML = '';
+    buildCards();
+  });
+
+  buttonContainer.append(submitButton,exploreButton)
 
   selectInput.append(option1, option2, option3, option4, option5, option6, option7, option8, option9, option10, option11, option12);
-  wishForm.append(labelContainer, label1Container, label2Container, label3Container,  label4Container, submitButton);
+  wishForm.append(labelContainer, label1Container, label2Container, label3Container,  label4Container, buttonContainer);
   wishFormContainer.append(wishForm);
   thirdPage.append(wishFormContainer);
   middleContainer.append(thirdPage);
