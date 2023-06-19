@@ -586,3 +586,7 @@ select {
   font-weight: 500;
 }
 
+.cart-button-container {
+  display: flex;
+  gap: 20px;
+}

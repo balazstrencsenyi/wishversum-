@@ -1,36 +1,28 @@
-export function addToCart(event) {
-  const cardButton = event.target;
+export function emptyCart() {
   const cart = document.querySelector('.cart');
-  let totalPriceElement = document.querySelector('.total-price');
+  const totalPriceElement = document.querySelector('.total-price');
+  const totalPriceDisplay = document.createElement('div');
+  totalPriceDisplay.className = 'total-price';
+  totalPriceDisplay.textContent = `Total: $0.00`;
 
-  const wishCard = cardButton.closest('.wish-card');
-  const title = wishCard.dataset.title;
-  const price = parseFloat(wishCard.dataset.price);
+  cart.innerHTML = '';
+  cart.appendChild(totalPriceDisplay);
 
-  const div = document.createElement('div');
-  div.className = 'cart-item';
-  div.innerHTML = `
-    <h3>${title}</h3>
-    <p>Price: ${price}</p>
-  `;
-
-  cart.appendChild(div);
-
-  let totalPrice = calculateTotalPrice(); // Calculate the total price
+  let totalPrice = calculateTotalPrice(); // Recalculate the total price
 
   // Remove existing total price display
   if (totalPriceElement) {
     totalPriceElement.remove();
   }
 
-  // Display the total price at the end of the cart
+  // Display the updated total price at the end of the cart
   totalPriceElement = document.createElement('div');
   totalPriceElement.className = 'total-price';
   totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
   cart.appendChild(totalPriceElement);
 }
 
-function calculateTotalPrice() {
+export function calculateTotalPrice() {
   const cartItems = document.querySelectorAll('.cart-item');
   let totalPrice = 0;
 

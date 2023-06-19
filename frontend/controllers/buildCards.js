@@ -1,5 +1,6 @@
 import { addToCart } from './addToCartHandler.js';
 import { main } from '../script.js';
+import { emptyCart, calculateTotalPrice } from './emptyCart.js';
 
 export async function buildCards() {
   const root = document.querySelector('#root');
@@ -10,7 +11,7 @@ export async function buildCards() {
 
   const webShop = document.createElement('div');
   webShop.className = 'webshop-container';
-  webShop.id = "webshop-container";
+  webShop.id = 'webshop-container';
 
   const webShopHeader = document.createElement('div');
   webShopHeader.className = 'webshop-header';
@@ -46,11 +47,21 @@ export async function buildCards() {
   const cart = document.createElement('div');
   cart.classList.add('cart');
 
+  const cartButtonContainer = document.createElement('div');
+  cartButtonContainer.classList.add('cart-button-container');
+
+  const emptyButton = document.createElement('button');
+  emptyButton.classList.add('empty-button');
+  emptyButton.innerText = 'Empty Cart';
+
+  emptyButton.addEventListener('click', emptyCart);
+
   const cartButton = document.createElement('button');
   cartButton.classList.add('cart-button');
   cartButton.innerText = 'Send Order';
 
-  cartContainer.append(cart, cartButton);
+  cartButtonContainer.append(emptyButton, cartButton);
+  cartContainer.append(cart, cartButtonContainer);
 
   webShopRightContainer.append(cartIMG, cartContainer);
 
@@ -98,5 +109,6 @@ export async function buildCards() {
 
   webShop.append(wishesContainer, webShopRightContainer, webShopHeader);
   root.appendChild(webShop);
+  window.calculateTotalPrice = calculateTotalPrice;
   return webShop;
 }
