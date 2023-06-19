@@ -9,7 +9,7 @@ export async function saveData() {
     e.preventDefault();
     const form = e.target;
     const name = document.querySelector("#last-name").value;
-    const newData = {};
+    const formData = {};
 
     const formElements = Array.from(form.elements);
     for (let element of formElements) {
@@ -21,13 +21,47 @@ export async function saveData() {
           element.name === "wishInput" ||
           element.name === "selectInput")
       ) {
-        newData[element.name] = element.value;
+        formData[element.name] = element.value;
       }
     }
 
+    const orderData = getOrderData(); // Retrieve the order data
+
+    const newData = {
+      ...formData,
+      orderData: orderData // Add the order data to the newData object
+    };
+
     await post(`/orders/${name}`, newData);
     form.reset();
+
+    // Combine form data and order data into a single JSON object
+    const json = JSON.stringify({ formData, orderData });
+    console.log(json);
   });
+}
+
+
+// Helper function to retrieve the order data from the cart
+function getOrderData() {
+  const cartItems = document.querySelectorAll('.cart-item');
+  const orderData = [];
+
+  cartItems.forEach((item) => {
+    const title = item.querySelector('h3').textContent;
+    const priceString = item.querySelector('p').textContent;
+    const price = parseFloat(priceString.split('Price: ')[1]);
+    const quantityElement = item.querySelector('.item-quantity');
+    const quantity = parseInt(quantityElement.textContent);
+
+    orderData.push({
+      title: title,
+      price: price,
+      quantity: quantity
+    });
+  });
+
+  return orderData;
 }
 
 export function createHeader() {

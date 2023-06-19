@@ -1,6 +1,6 @@
 import { addToCart } from './addToCartHandler.js';
 import { main } from '../script.js';
-import { emptyCart, calculateTotalPrice } from './addToCartHandler.js';
+import { emptyCart, calculateTotalPrice, sendOrder} from './addToCartHandler.js';
 
 export async function buildCards() {
   const root = document.querySelector('#root');
@@ -59,6 +59,7 @@ export async function buildCards() {
   const cartButton = document.createElement('button');
   cartButton.classList.add('cart-button');
   cartButton.innerText = 'Send Order';
+  cartButton.addEventListener('click', sendOrder);
 
   cartButtonContainer.append(emptyButton, cartButton);
   cartContainer.append(cart, cartButtonContainer);

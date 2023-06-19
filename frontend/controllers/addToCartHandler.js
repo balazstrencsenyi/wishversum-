@@ -80,3 +80,40 @@ export function calculateTotalPrice() {
 
   return totalPrice;
 }
+
+export function sendOrder() {
+
+  const cartItems = document.querySelectorAll('.cart-item');
+  const orderData = [];
+
+  cartItems.forEach((item) => {
+    const title = item.querySelector('h3').textContent;
+    const priceString = item.querySelector('p').textContent;
+    const price = parseFloat(priceString.split('Price: ')[1]);
+    const quantityElement = item.querySelector('.item-quantity');
+    const quantity = parseInt(quantityElement.textContent);
+
+    orderData.push({
+      title: title,
+      price: price,
+      quantity: quantity
+    });
+  });
+
+  // Send the order data to the server
+  fetch('/orders', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(orderData)
+  })
+    .then(response => response.json())
+    .then(data => {
+      console.log(data); // JSON response from the server
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+
