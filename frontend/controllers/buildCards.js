@@ -1,6 +1,6 @@
 import { addToCart } from './addToCartHandler.js';
 import { main } from '../script.js';
-import { emptyCart, calculateTotalPrice } from './emptyCart.js';
+import { emptyCart, calculateTotalPrice } from './addToCartHandler.js';
 
 export async function buildCards() {
   const root = document.querySelector('#root');
