@@ -1,43 +1,81 @@
+let totalPrice = 0; // Initialize total price
+
 export function addToCart(event) {
   const cardButton = event.target;
   const cart = document.querySelector('.cart');
-  let totalPriceElement = document.querySelector('.total-price');
+  const totalPriceElement = document.querySelector('.total-price');
 
   const wishCard = cardButton.closest('.wish-card');
   const title = wishCard.dataset.title;
   const price = parseFloat(wishCard.dataset.price);
 
-  const div = document.createElement('div');
-  div.className = 'cart-item';
-  div.innerHTML = `
-    <h3>${title}</h3>
-    <p>Price: ${price}</p>
-  `;
+  const existingCartItem = cart.querySelector(`.cart-item[data-title="${title}"]`);
 
-  cart.appendChild(div);
+  if (existingCartItem) {
+    const quantityElement = existingCartItem.querySelector('.item-quantity');
+    let quantity = parseInt(quantityElement.textContent);
+    quantity++;
+    quantityElement.textContent = quantity;
+  } else {
+    const div = document.createElement('div');
+    div.className = 'cart-item';
+    div.dataset.title = title;
+    div.innerHTML = `
+      <h3>${title}</h3>
+      <p>Price: ${price}</p>
+      <p>Quantity: <span class="item-quantity">1</span></p>
+    `;
 
-  let totalPrice = calculateTotalPrice(); // Calculate the total price
+    cart.appendChild(div);
+  }
+
+  totalPrice += price; // Update total price
+
+  updateTotalPrice(); // Update the total price display
+}
+
+export function emptyCart() {
+  const cart = document.querySelector('.cart');
+
+  // Clear the cart HTML
+  cart.innerHTML = '';
+
+  totalPrice = 0; // Reset total price
+
+  updateTotalPrice(); // Update the total price display
+}
+
+export function updateTotalPrice() {
+  const cart = document.querySelector('.cart');
+  const totalPriceElement = document.querySelector('.total-price');
 
   // Remove existing total price display
   if (totalPriceElement) {
     totalPriceElement.remove();
   }
 
-  // Display the total price at the end of the cart
-  totalPriceElement = document.createElement('div');
-  totalPriceElement.className = 'total-price';
-  totalPriceElement.textContent = `Total: $${totalPrice.toFixed(2)}`;
-  cart.appendChild(totalPriceElement);
+  // Calculate the total price
+  let totalPrice = calculateTotalPrice();
+
+  // Create a new total price display
+  const totalPriceDisplay = document.createElement('div');
+  totalPriceDisplay.className = 'total-price';
+  totalPriceDisplay.textContent = `Total: $${totalPrice.toFixed(2)}`;
+
+  // Append the total price display to the cart
+  cart.appendChild(totalPriceDisplay);
 }
 
-function calculateTotalPrice() {
+export function calculateTotalPrice() {
   const cartItems = document.querySelectorAll('.cart-item');
   let totalPrice = 0;
 
   cartItems.forEach((item) => {
     const priceString = item.querySelector('p').textContent;
     const price = parseFloat(priceString.split('Price: ')[1]);
-    totalPrice += price;
+    const quantityElement = item.querySelector('.item-quantity');
+    const quantity = parseInt(quantityElement.textContent);
+    totalPrice += price * quantity;
   });
 
   return totalPrice;
